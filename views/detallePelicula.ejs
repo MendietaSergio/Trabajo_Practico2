@@ -16,7 +16,7 @@
         <button type="submit" class="btn btn-success" name="editar">Editar</button>        
     </form>
     <br>
-    <form action="/movies/delete/<%=pelicula.id%>" method="POST">
+    <form action="/movies/delete/<%=pelicula.id%>?_method=DELETE" method="POST">
         <button type="submit" class="btn btn-success" name="eliminar">Eliminar</button>
     </form>
 </body>
