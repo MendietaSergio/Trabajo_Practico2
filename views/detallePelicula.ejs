@@ -1,0 +1,24 @@
+<%-include('./partials/head.ejs') %> 
+<body>
+    <%-include('./partials/header.ejs')%>
+    <h1>Detalle de la pelicula seleccionada: </h1>
+    <h2>Título</h2>
+    <p><%= pelicula.title %> </p>
+    <h2>Rating</h2>
+    <p><%= pelicula.rating %> </p>
+    <h2>Premios</h2>
+    <p><%= pelicula.awards %> </p>
+    <h2>Duración</h2>
+    <p><%= pelicula.length %> </p>
+    <h2>Fecha de lanzamiento</h2>
+    <p><%= pelicula.release_date %> </p>
+    <form action="/movies/edit/<%=pelicula.id%>" method="GET">
+        <button type="submit" class="btn btn-success" name="editar">Editar</button>        
+    </form>
+    <br>
+    <form action="/movies/delete/<%=pelicula.id%>" method="POST">
+        <button type="submit" class="btn btn-success" name="eliminar">Eliminar</button>
+    </form>
+</body>
+<%-include('./partials/footer.ejs') %> 
+</html>

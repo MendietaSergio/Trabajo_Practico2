@@ -1,0 +1,32 @@
+<%-include('./partials/head.ejs') %> 
+<body>
+    <%-include('./partials/header.ejs')%>
+    
+    <form action="/movies/add" method="POST">
+        <div>
+            <label for="title">Titulo: </label>
+            <input type="text" name="title" >
+        </div>
+        <div>
+            <label for="rating">Rating: </label>
+            <input type="text" name="rating">
+        </div>
+        <div>
+            <label for="length">Duracion: </label>
+            <input type="text" name="length">
+        </div>
+        <div>
+            <label for="release_date">Fecha de Lanzamiento: </label>
+            <input type="date" name="release_date">
+        </div>
+        <div>
+            <label for="awards">Premios: </label>
+            <input type="text" name="awards">
+        </div>
+        <button type="submit" class="btn btn-success" name="aceptar">Aceptar</button>        
+        <a href="/"><button type="button" class="btn btn-success" name="cancelar">Cancelar</button></a>
+        
+    </form>
+</body>
+<%-include('./partials/footer.ejs') %> 
+</html>

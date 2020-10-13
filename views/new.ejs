@@ -1,0 +1,17 @@
+<%-include('./partials/head.ejs') %> 
+<body>
+    <!--HEADER MODULARIZADO-->
+<%-include('./partials/header.ejs')%>
+    <h1>Lista de peliculas con fecha de lanzamiento.</h1>
+    <h2>NUEVAS.</h2>
+    <ul>
+        <% for (let i = 0; i < peliculas.length; i++){ %> 
+            <li>
+                <a href="/movies/detail/<%= peliculas[i].id %>"><%= peliculas[i].title %></a>
+                 
+            </li>
+        <% } %> 
+    </ul>
+</body>
+<%-include('./partials/footer.ejs') %> 
+</html>
