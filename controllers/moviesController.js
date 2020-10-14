@@ -1,6 +1,8 @@
 
+const { Sequelize } = require("../database/models");
 const db = require("../database/models");
 const sequelize = db.sequelize;
+const Op = Sequelize.Op;
 
 module.exports ={
     listar: (req,res)=>{
@@ -56,10 +58,10 @@ module.exports ={
         })
     },
     search:(req,res)=>{
-        console.log(req.body.search)
+        let buscador = req.query.search
         db.Peliculas.findAll({
             where:{
-                title: {[db.Sequelize.Op.like]: req.body.search}
+                title: {[Op.like]: `%${buscador}%`}
             }
         })
         .then(function(peliculas){

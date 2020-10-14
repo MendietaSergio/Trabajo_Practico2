@@ -7,7 +7,7 @@ router.get('/', moviesController.listar);
 
 router.get('/new',moviesController.new);
 router.get('/recommended',moviesController.recommended);
-router.post('/search',moviesController.search);
+router.get('/search',moviesController.search);
 
 router.get('/detail/:id',moviesController.detalle);
 router.get('/edit/:id',moviesController.edit);
